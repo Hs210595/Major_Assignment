@@ -9,6 +9,7 @@ def checkcolumn(col,Entry):
 
 def checkarrow(row,Entry):
     for i in range(0,9):
+        print(sudoku[row][i])
         if sudoku[row][i]==Entry:
             return False
     return True
@@ -84,12 +85,12 @@ while(1):
     for i in range(9):
         print(sudoku[i])
     x=int(input("Enter the row  position: "))
-    y=int(input("Enter the column  position: "))
-    z=int(input("Enter the value of cube number: "))
+    #y=int(input("Enter the column  position: "))
+    #z=int(input("Enter the value of cube number: "))
 
     entry=int(input("Enter the Entry: "))
-    Value=int(checkcolumn(y,entry))
-    Value=Value+int(checkarrow(x,entry))
+    #Value=int(checkcolumn(y,entry))
+    Value=int(checkarrow(x,entry))
     #Value= Value+checkcube(z,entry)
     print(Value)
 
